@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusLaunch - Landing Page de Alta Conversão</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header / Navigation -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/25">
+          <i data-lucide="rocket" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-extrabold text-lg text-white tracking-tight">Nexus<span class="text-indigo-400">Launch</span></span>
+          <span class="hidden sm:inline-block text-[10px] bg-indigo-950 text-indigo-400 border border-indigo-800 px-2 py-0.5 rounded-full ml-2 font-mono">v3.0 Live</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-300">
+        <a href="#recursos" class="hover:text-white transition">Recursos</a>
+        <a href="#metricas" class="hover:text-white transition">Resultados</a>
+        <a href="#precos" class="hover:text-white transition">Planos</a>
+        <a href="#depoimentos" class="hover:text-white transition">Depoimentos</a>
+        <a href="#faq" class="hover:text-white transition">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="scrollToPricing()" class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 text-white text-xs font-bold shadow-lg shadow-indigo-600/30 transition flex items-center gap-1.5">
+          <span>Começar Grátis</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 w-full space-y-20 pb-20">
+
+    <!-- HERO SECTION -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 text-center space-y-8">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-950/80 border border-indigo-800 text-indigo-300 text-xs font-semibold shadow-inner">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-indigo-400"></i>
+        <span>Lançamento 2026 • A Nova Geração de Landing Pages Inteligentes</span>
+      </div>
+
+      <div class="space-y-4 max-w-4xl mx-auto">
+        <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">
+          Acelere sua Conversão com uma <br class="hidden sm:inline" />
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Landing Page de Alto Impacto</span>
+        </h1>
+        <p class="text-sm sm:text-base md:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          Transforme visitantes em clientes fiéis com arquitetura moderna, design persuasivo, carregamento ultrarrápido e interatividade de ponta a ponta.
+        </p>
+      </div>
+
+      <!-- Lead Capture Form -->
+      <form onsubmit="handleLeadSubmit(event)" class="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-2 bg-slate-900/90 border border-slate-800 p-2 rounded-2xl shadow-2xl">
+        <input 
+          id="leadEmail" 
+          type="email" 
+          required 
+          placeholder="Digite seu melhor e-mail corporativo..." 
+          class="w-full bg-transparent px-3 py-2 text-xs text-white placeholder-slate-500 outline-none"
+        />
+        <button 
+          type="submit" 
+          class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 text-white text-xs font-bold transition flex items-center justify-center gap-1.5 shrink-0 shadow-md shadow-indigo-600/30"
+        >
+          <span>Criar Conta</span>
+          <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+        </button>
+      </form>
+
+      <!-- Social Proof / Avatars -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-xs text-slate-400 pt-2">
+        <div class="flex -space-x-2">
+          <img class="w-7 h-7 rounded-full border-2 border-slate-950" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop" alt="User">
+          <img class="w-7 h-7 rounded-full border-2 border-slate-950" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="User">
+          <img class="w-7 h-7 rounded-full border-2 border-slate-950" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop" alt="User">
+          <img class="w-7 h-7 rounded-full border-2 border-slate-950" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop" alt="User">
+        </div>
+        <div class="flex items-center gap-1 text-slate-300">
+          <div class="flex text-amber-400">
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+            <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+          </div>
+          <span class="font-bold text-white">4.9/5</span>
+          <span>baseado em +3.400 empresas ativas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS SECTION -->
+    <section id="metricas" class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-3xl bg-slate-900/60 border border-slate-800 text-center">
+        <div class="space-y-1">
+          <div class="text-2xl sm:text-3xl font-black text-white">99.9%</div>
+          <div class="text-xs text-slate-400 font-medium">Uptime Garantido em SLA</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-2xl sm:text-3xl font-black text-indigo-400">10x</div>
+          <div class="text-xs text-slate-400 font-medium">Mais Rápido no Carregamento</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-2xl sm:text-3xl font-black text-purple-400">+15.000</div>
+          <div class="text-xs text-slate-400 font-medium">Projetos Implantados</div>
+        </div>
+        <div class="space-y-1">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-400">R$ 4.8M</div>
+          <div class="text-xs text-slate-400 font-medium">Receita Gerada para Clientes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="recursos" class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+      <div class="text-center space-y-3 max-w-2xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-black text-white">Recursos Desenvolvidos para Conversão</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Cada detalhe foi arquitetado para guiar o visitante até a ação final com zero atrito.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-indigo-500/50 transition group">
+          <div class="w-10 h-10 rounded-xl bg-indigo-950 text-indigo-400 border border-indigo-800 flex items-center justify-center group-hover:scale-110 transition">
+            <i data-lucide="zap" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Performance Instantânea</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Páginas que carregam em menos de 0.8s, otimizadas para pontuação 100 no Google PageSpeed.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-purple-500/50 transition group">
+          <div class="w-10 h-10 rounded-xl bg-purple-950 text-purple-400 border border-purple-800 flex items-center justify-center group-hover:scale-110 transition">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Segurança Blindada</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Certificado SSL automático, proteção contra ataques DDoS e conformidade total com a LGPD.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-pink-500/50 transition group">
+          <div class="w-10 h-10 rounded-xl bg-pink-950 text-pink-400 border border-pink-800 flex items-center justify-center group-hover:scale-110 transition">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Integração com IA</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Personalização dinâmica de conteúdo conforme a origem do visitante e testes A/B automáticos.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-cyan-500/50 transition group">
+          <div class="w-10 h-10 rounded-xl bg-cyan-950 text-cyan-400 border border-cyan-800 flex items-center justify-center group-hover:scale-110 transition">
+            <i data-lucide="smartphone" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">100% Mobile First</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Experiência fluida e nativa em qualquer dispositivo, desde telas compactas até monitores ultrawide.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-emerald-500/50 transition group">
+          <div class="w-10 h-10 rounded-xl bg-emerald-950 text-emerald-400 border border-emerald-800 flex items-center justify-center group-hover:scale-110 transition">
+            <i data-lucide="bar-chart-2" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Métricas em Tempo Real</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Painel analítico embutido com visualização de funil, taxas de clique e eventos de conversão.</p>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3 hover:border-amber-500/50 transition group">
+          <div class="w-10 h-10 rounded-xl bg-amber-950 text-amber-400 border border-amber-800 flex items-center justify-center group-hover:scale-110 transition">
+            <i data-lucide="headphones" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-bold text-white text-base">Suporte Especializado 24/7</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">Time técnico sempre a postos via chat ou vídeo para garantir que sua página nunca saia do ar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING TABLE SECTION -->
+    <section id="precos" class="max-w-7xl mx-auto px-4 sm:px-6 space-y-10">
+      <div class="text-center space-y-3 max-w-xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-black text-white">Planos Transparentes & Flexíveis</h2>
+        <p class="text-xs sm:text-sm text-slate-400">Escolha o plano ideal para a escala atual da sua empresa. Cancele quando quiser.</p>
+
+        <!-- Toggle Mensal / Anual -->
+        <div class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 p-1 rounded-xl text-xs font-semibold pt-2">
+          <button id="billingMonthlyBtn" onclick="setBilling('monthly')" class="px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-bold transition">
+            Mensal
+          </button>
+          <button id="billingAnnualBtn" onclick="setBilling('annual')" class="px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition flex items-center gap-1.5">
+            <span>Anual</span>
+            <span class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800 px-1.5 py-0.2 rounded-full font-bold">-20% OFF</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-stretch">
+        <!-- Plan 1: Starter -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="space-y-1">
+              <h3 class="font-bold text-white text-base">Starter</h3>
+              <p class="text-xs text-slate-400">Para profissionais autônomos e novos projetos.</p>
+            </div>
+            <div class="flex items-baseline gap-1">
+              <span id="priceStarter" class="text-3xl font-black text-white">R$ 49</span>
+              <span class="text-xs text-slate-400">/mês</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 1 Domínio Personalizado</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Até 10.000 visualizações/mês</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Formulários com envio para e-mail</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Certificado SSL incluso</li>
+            </ul>
+          </div>
+          <button onclick="selectPlan('Starter')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition">
+            Escolher Starter
+          </button>
+        </div>
+
+        <!-- Plan 2: Pro (Featured) -->
+        <div class="bg-gradient-to-b from-indigo-950/70 to-slate-900/90 border-2 border-indigo-500 rounded-3xl p-6 flex flex-col justify-between space-y-6 relative shadow-2xl shadow-indigo-500/20">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-500 text-white font-extrabold text-[10px] uppercase tracking-wider px-3 py-0.5 rounded-full shadow-md">
+            Mais Escolhido
+          </div>
+          <div class="space-y-4 pt-1">
+            <div class="space-y-1">
+              <h3 class="font-bold text-white text-base">Profissional</h3>
+              <p class="text-xs text-indigo-200">Para startups e empresas em crescimento.</p>
+            </div>
+            <div class="flex items-baseline gap-1">
+              <span id="pricePro" class="text-3xl font-black text-white">R$ 129</span>
+              <span class="text-xs text-slate-400">/mês</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-200">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 5 Domínios Personalizados</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Visualizações Ilimitadas</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Testes A/B automatizados</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Integração com CRM & WhatsApp</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Suporte prioritário via WhatsApp</li>
+            </ul>
+          </div>
+          <button onclick="selectPlan('Profissional')" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:opacity-90 text-white text-xs font-bold transition shadow-lg shadow-indigo-600/30">
+            Começar com Pro
+          </button>
+        </div>
+
+        <!-- Plan 3: Enterprise -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="space-y-1">
+              <h3 class="font-bold text-white text-base">Enterprise</h3>
+              <p class="text-xs text-slate-400">Para grandes operações com alta demanda.</p>
+            </div>
+            <div class="flex items-baseline gap-1">
+              <span id="priceEnterprise" class="text-3xl font-black text-white">R$ 399</span>
+              <span class="text-xs text-slate-400">/mês</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Domínios Ilimitados</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> SLA de 99.9% com contrato</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Gerente de contas dedicado</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Customizações de código sob demanda</li>
+            </ul>
+          </div>
+          <button onclick="selectPlan('Enterprise')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition">
+            Falar com Consultor
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="max-w-4xl mx-auto px-4 sm:px-6 space-y-8">
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl font-black text-white">Perguntas Frequentes</h2>
+        <p class="text-xs text-slate-400">Tudo o que você precisa saber antes de iniciar.</p>
+      </div>
+
+      <div class="space-y-3">
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 cursor-pointer" onclick="toggleFaq(1)">
+          <div class="flex items-center justify-between text-xs font-bold text-white">
+            <span>Quanto tempo leva para a Landing Page ficar ativa?</span>
+            <i id="faqIcon1" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </div>
+          <div id="faqAns1" class="hidden text-xs text-slate-400 pt-3 border-t border-slate-800/60 mt-3 leading-relaxed">
+            A publicação é imediata! Assim que configurada, sua landing page é compilada e já recebe tráfego com certificado de segurança ativo em questão de segundos.
+          </div>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 cursor-pointer" onclick="toggleFaq(2)">
+          <div class="flex items-center justify-between text-xs font-bold text-white">
+            <span>Posso usar meu próprio domínio .com.br ou .com?</span>
+            <i id="faqIcon2" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </div>
+          <div id="faqAns2" class="hidden text-xs text-slate-400 pt-3 border-t border-slate-800/60 mt-3 leading-relaxed">
+            Sim! Você pode conectar qualquer domínio personalizado diretamente pelo painel através de um simples apontamento CNAME ou Cloudflare.
+          </div>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 cursor-pointer" onclick="toggleFaq(3)">
+          <div class="flex items-center justify-between text-xs font-bold text-white">
+            <span>Preciso de conhecimento em programação para editar?</span>
+            <i id="faqIcon3" data-lucide="chevron-down" class="w-4 h-4 text-slate-400 transition-transform"></i>
+          </div>
+          <div id="faqAns3" class="hidden text-xs text-slate-400 pt-3 border-t border-slate-800/60 mt-3 leading-relaxed">
+            Nenhum conhecimento prévio é necessário. Você pode alterar textos, cores e seções pedindo diretamente em português no chat da miniLovable!
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    let billingCycle = 'monthly';
+
+    function setBilling(cycle) {
+      billingCycle = cycle;
+      const btnM = document.getElementById('billingMonthlyBtn');
+      const btnA = document.getElementById('billingAnnualBtn');
+      const pStarter = document.getElementById('priceStarter');
+      const pPro = document.getElementById('pricePro');
+      const pEnt = document.getElementById('priceEnterprise');
+
+      if (cycle === 'annual') {
+        btnA.className = 'px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-bold transition flex items-center gap-1.5';
+        btnM.className = 'px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition';
+        pStarter.innerText = 'R$ 39';
+        pPro.innerText = 'R$ 99';
+        pEnt.innerText = 'R$ 319';
+      } else {
+        btnM.className = 'px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-bold transition';
+        btnA.className = 'px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition flex items-center gap-1.5';
+        pStarter.innerText = 'R$ 49';
+        pPro.innerText = 'R$ 129';
+        pEnt.innerText = 'R$ 399';
+      }
+    }
+
+    function handleLeadSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('leadEmail').value;
+      alert('🎉 Parabéns! Conta criada com sucesso para: ' + email + '\nVocê receberá o link de ativação em segundos.');
+      document.getElementById('leadEmail').value = '';
+    }
+
+    function selectPlan(plan) {
+      alert('🚀 Plano selecionado: ' + plan + ' (' + (billingCycle === 'annual' ? 'Anual com 20% OFF' : 'Mensal') + ')\nRedirecionando para checkout seguro...');
+    }
+
+    function scrollToPricing() {
+      document.getElementById('precos').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleFaq(num) {
+      const ans = document.getElementById('faqAns' + num);
+      const icon = document.getElementById('faqIcon' + num);
+      if (ans.classList.contains('hidden')) {
+        ans.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        ans.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    lucide.createIcons();
+  </script>
+</body>
+</html>
